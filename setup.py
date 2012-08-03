@@ -6,7 +6,7 @@ version = '0.1'
 setup(name='flask_menu_pool',
       version=version,
       description="Create menus from YAML files in the flask web framework",
-      long_description=open("README.md").read()
+      long_description=open("README.md").read(),
       # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Programming Language :: Python",
