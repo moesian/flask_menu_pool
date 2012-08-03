@@ -1,0 +1,12 @@
+{% for child in children %}
+<li class="{{ child.get_slug }}  {% if child.ancestor %}active ancestor{% endif %}  {% if child.selected %}active{% endif %} {% if child.children %}has-children{% endif %} ">
+    <a href="{{ child.get_link }}" >{{ child.title }}</a>
+    {% if child.children %}
+    <div class="sub-nav">
+        <ul class="container nav">
+            {{ menu(from_level = from_level, to_level = to_level, extra_inactive = extra_inactive, extra_active = extra_active, template = template, next_page = child)|safe }}
+        </ul>
+    </div>
+    {% endif %}
+</li>
+{% endfor %}

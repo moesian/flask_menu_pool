@@ -1,0 +1,3 @@
+{% for ance in ancestors %}
+<li>{% if not loop.last %}<a href="{{ ance.get_link }}">{{ ance.title }}</a> / {% else %}{{ ance.title }}{% endif %}</li>
+{% endfor %}
